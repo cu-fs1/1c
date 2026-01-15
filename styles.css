@@ -3,7 +3,7 @@
     --card-bg: #161b22;
     --text-color: #c9d1d9;
     --header-bg: #161b22;
-    --border-color: #30363d;
+    --border-color: black;
     --accent-color: #58a6ff;
 }
 
@@ -13,7 +13,7 @@
         --card-bg: #ffffff;
         --text-color: #1f2328;
         --header-bg: #ffffff;
-        --border-color: #d0d7de;
+        --border-color: black;
         --accent-color: #0969da;
     }
 }
@@ -23,7 +23,7 @@
     --card-bg: #ffffff;
     --text-color: #1f2328;
     --header-bg: #ffffff;
-    --border-color: #d0d7de;
+    --border-color: black;
     --accent-color: #0969da;
 }
 
@@ -56,7 +56,7 @@ body {
     gap: 1.5rem;
     grid-template-areas:
         "header header header header"
-        "nav card1 card2 card3"
+        "nav analytics users settings"
         "nav main main main";
     grid-template-columns: 280px 1fr 1fr 1fr;
     grid-template-rows: auto 200px 1fr;
@@ -96,7 +96,7 @@ body {
 .navigation {
     grid-area: nav;
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 2px dashed var(--border-color);
     border-radius: 12px;
     padding: 2rem;
     display: flex;
@@ -106,7 +106,7 @@ body {
 
 .card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 2px dashed var(--border-color);
     border-radius: 12px;
     padding: 2rem;
     display: flex;
@@ -118,9 +118,9 @@ body {
     border-color: var(--accent-color);
 }
 
-.card-analytics { grid-area: card1; }
-.card-users { grid-area: card2; }
-.card-settings { grid-area: card3; }
+.card-analytics { grid-area: analytics; }
+.card-users { grid-area: users; }
+.card-settings { grid-area: settings; }
 
 .main-content {
     grid-area: main;
@@ -132,8 +132,8 @@ body {
         grid-template-areas:
             "header header"
             "nav nav"
-            "card1 card2"
-            "card3 main";
+            "analytics users"
+            "settings main";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto 200px 1fr;
         padding: 1rem;
@@ -145,9 +145,9 @@ body {
         grid-template-areas:
             "header"
             "nav"
-            "card1"
-            "card2"
-            "card3"
+            "analytics"
+            "users"
+            "settings"
             "main";
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
